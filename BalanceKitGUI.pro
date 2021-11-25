@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui widgets charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 RC_ICONS = icon.ico
@@ -10,7 +10,8 @@ CONFIG += c++11
 
 SOURCES += \
     balancekiteditor.cpp \
-    main.cpp
+    main.cpp \
+    statswidget.cpp
 
 
 # Default rules for deployment.
@@ -19,10 +20,12 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    balancekiteditor.h
+    balancekiteditor.h \
+    statswidget.h
 
 FORMS += \
-    balancekiteditor.ui
+    balancekiteditor.ui \
+    statswidget.ui
 
 RESOURCES += \
     balancekit.qrc
